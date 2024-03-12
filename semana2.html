@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+        const itens = [];
+
+
+    function adicionarItem() {
+        const item = document.getElementById("item").value;
+        itens.push(item);
+        itens.sort();
+        atualizarLista();
+        document.getElementById("item").value = "";
+    }
+
+
+    function atualizarLista() {
+        const lista = document.getElementById("lista");
+        lista.innerHTML = "";
+        for (const item of itens) {
+            const itemElement = document.createElement("li");
+            itemElement.textContent = item;
+            lista.appendChild(itemElement);
+        }
+    }
+    </script>
+</head>
+<body>
+    <h1>Lista Ordenada</h1>
+    <form onsubmit="adicionarItem()">
+        <input type="text" id="item" name="item" placeholder="Digite um item">
+        <button type="submit">Adicionar</button>
+    </form>
+    <ul id="lista"></ul>
+
+    <a href="index.html">Voltar</a>
+</body>
+</html>
