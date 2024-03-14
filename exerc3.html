@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Verificador de Palíndromo</title>
+  
+</head>
+<body>
+  <h1>Verificador de Palíndromo</h1>
+  <p>Digite um texto para verificar se é um palíndromo:</p>
+  <input type="text" id="texto" placeholder="Digite o texto aqui">
+  <button id="botao">Verificar</button>
+  <br>
+  <script>
+    function ehPalindromo(texto) {
+      const textoSemEspaco = texto.replace(/[^a-zA-Z0-9]/g, "");
+      const textoMinusculo = textoSemEspaco.toLowerCase();
+      const textoRevertido = textoMinusculo.split("").reverse().join("");
+      return textoMinusculo === textoRevertido;
+    }
+    function obterTexto() {
+      return document.getElementById("texto").value;
+    }
+    function exibirMensagem(mensagem) {
+      alert(mensagem);
+    }
+    function verificarPalindromo() {
+      const texto = obterTexto();
+
+      if (ehPalindromo(texto)) {
+        exibirMensagem("O texto é um palíndromo!");
+      } else {
+        exibirMensagem("O texto não é um palíndromo.");
+      }
+    }
+    document.getElementById("botao").addEventListener("click", verificarPalindromo);
+  </script>
+  <a href="semana3.html">Voltar</a>
+</body>
+</html>
