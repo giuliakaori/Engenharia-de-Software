@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <script>
+        function Mudar() 
+        {
+            let drone = document.querySelector('input[name="drone"]:checked').value;
+            let extras = document.getElementById("extras");
+            extras.innerHTML = "";
+
+            if (drone === "professor") {
+                let atuacaoLabel = document.createElement("label");
+                atuacaoLabel.setAttribute("for", "areaAtuacao");
+                atuacaoLabel.innerHTML = "Atuação:";
+                let atuacaoInput = document.createElement("input");
+                atuacaoInput.setAttribute("type", "text");
+                atuacaoInput.setAttribute("id", "areaAtuação");
+                atuacaoInput.setAttribute("name", "areaAtuacao");
+                extras.appendChild(atuacaoLabel);
+                extras.appendChild(atuacaoInput);
+
+                let matriculaLabel = document.createElement("label");
+                matriculaLabel.setAttribute("for", "matricula");
+                matriculaLabel.innerHTML = "Matrícula:";
+                let matriculaInput = document.createElement("input");
+                matriculaInput.setAttribute("type", "text");
+                matriculaInput.setAttribute("id", "matricula");
+                matriculaInput.setAttribute("name", "matricula");
+                extras.appendChild(matriculaLabel);
+                extras.appendChild(matriculaInput);
+
+                let lattesLabel = document.createElement("label");
+                lattesLabel.setAttribute("for", "lattes");
+                lattesLabel.innerHTML = "Lattes:";
+                let lattesInput = document.createElement("input");
+                lattesInput.setAttribute("type", "text");
+                lattesInput.setAttribute("id", "lattes");
+                lattesInput.setAttribute("name", "lattes");
+                extras.appendChild(lattesLabel);
+                extras.appendChild(lattesInput);
+            }
+
+            else if (drone === "aluno") {
+                let cursoLabel = document.createElement("label");
+                cursoLabel.setAttribute("for", "curso");
+                cursoLabel.innerHTML = "Curso:";
+                let cursoInput = document.createElement("input");
+                cursoInput.setAttribute("type", "text");
+                cursoInput.setAttribute("id", "curso");
+                cursoInput.setAttribute("name", "curso");
+                extras.appendChild(cursoLabel);
+                extras.appendChild(cursoInput);
+
+                let matriculaLabel = document.createElement("label");
+                matriculaLabel.setAttribute("for", "matricula");
+                matriculaLabel.innerHTML = "Matrícula:";
+                let matriculaInput = document.createElement("input");
+                matriculaInput.setAttribute("type", "text");
+                matriculaInput.setAttribute("id", "matricula");
+                matriculaInput.setAttribute("name", "matricula");
+                extras.appendChild(matriculaLabel);
+                extras.appendChild(matriculaInput);
+
+            } 
+        }
+    </script>
+</head>
+
+<body>
+    <section class="formulario-container">
+        <h2>Formulário de Cadastro</h2>
+        <form id="meuFormulario">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+            </div>
+            <br><br>
+            <div class="campo-email">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="fulano.com" required>
+            </div>
+            <br>
+            <div class="campo-data-nascimento">
+                <label for="dataNascimento">Data de Nascimento:</label>
+                <input type="date" id="dataNascimento" name="dataNascimento" required>
+            </div>
+            <br>
+            <div class="campo-telefone">
+                <label for="telefone">Telefone Fixo:</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="(99)9999-9999" required>
+            </div>
+            <br>
+            <div class="campo-celular">
+                <label for="celular">Telefone Celular:</label>
+                <input type="tel" id="celular" name="celular" placeholder="(99)9999-9999" required>
+            </div>
+           
+            <br>
+            <div class="campo-tipo">
+                <input type="radio" id="professor" value="professor" name="drone" onchange="Mudar()" checked>
+                <label for="professor">Professor</label>
+            </div>
+            <div>
+                <input type="radio" id="aluno" value="aluno" name="drone" onchange="Mudar()">
+                <label for="aluno">Aluno</label>
+            </div>
+            <br>
+           
+           
+            <div id="extras"></div>
+            <div class="botoes">
+                <button type="submit">Enviar</button>
+                <button type="reset">Redefinir</button>
+            </div>
+        </form>
+    </section>
+
+    <a href="semana4.html">Voltar</a>
+</body>
+
+</html>
