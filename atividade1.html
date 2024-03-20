@@ -10,8 +10,8 @@
         function Mudar() 
         {
             let drone = document.querySelector('input[name="drone"]:checked').value;
-            let extras = document.getElementById("extras");
-            extras.innerHTML = "";
+            let mudanca = document.getElementById("mudanca");
+            mudanca.innerHTML = "";
 
             if (drone === "professor") {
                 let atuacaoLabel = document.createElement("label");
@@ -21,8 +21,8 @@
                 atuacaoInput.setAttribute("type", "text");
                 atuacaoInput.setAttribute("id", "area");
                 atuacaoInput.setAttribute("name", "area");
-                extras.appendChild(atuacaoLabel);
-                extras.appendChild(atuacaoInput);
+                mudanca.appendChild(atuacaoLabel);
+                mudanca.appendChild(atuacaoInput);
 
                 let matriculaLabel = document.createElement("label");
                 matriculaLabel.setAttribute("for", "matricula");
@@ -31,8 +31,8 @@
                 matriculaInput.setAttribute("type", "text");
                 matriculaInput.setAttribute("id", "matricula");
                 matriculaInput.setAttribute("name", "matricula");
-                extras.appendChild(matriculaLabel);
-                extras.appendChild(matriculaInput);
+                mudanca.appendChild(matriculaLabel);
+                mudanca.appendChild(matriculaInput);
 
                 let lattesLabel = document.createElement("label");
                 lattesLabel.setAttribute("for", "lattes");
@@ -41,8 +41,8 @@
                 lattesInput.setAttribute("type", "text");
                 lattesInput.setAttribute("id", "lattes");
                 lattesInput.setAttribute("name", "lattes");
-                extras.appendChild(lattesLabel);
-                extras.appendChild(lattesInput);
+                mudanca.appendChild(lattesLabel);
+                mudanca.appendChild(lattesInput);
             }
 
             else if (drone === "aluno") {
@@ -53,8 +53,8 @@
                 cursoInput.setAttribute("type", "text");
                 cursoInput.setAttribute("id", "curso");
                 cursoInput.setAttribute("name", "curso");
-                extras.appendChild(cursoLabel);
-                extras.appendChild(cursoInput);
+                mudanca.appendChild(cursoLabel);
+                mudanca.appendChild(cursoInput);
 
                 let matriculaLabel = document.createElement("label");
                 matriculaLabel.setAttribute("for", "matricula");
@@ -63,8 +63,8 @@
                 matriculaInput.setAttribute("type", "text");
                 matriculaInput.setAttribute("id", "matricula");
                 matriculaInput.setAttribute("name", "matricula");
-                extras.appendChild(matriculaLabel);
-                extras.appendChild(matriculaInput);
+                mudanca.appendChild(matriculaLabel);
+                mudanca.appendChild(matriculaInput);
 
             } 
         }
@@ -111,7 +111,7 @@
             <br>
            
            
-            <div id="extras"></div>
+            <div id="mudanca"></div>
             <div class="botoes">
                 <button type="submit">Enviar</button>
                 <button type="reset">Redefinir</button>
