@@ -25,24 +25,24 @@
         caixaTotal.style.cssText = "border: 2px solid;padding: 5px 45px 5px 45px;"
         div.appendChild(caixaTotal);
 
-        let reload = document.createElement("img");
-        reload.src = "reload.png";
-        div.appendChild(reload);
-        reload.style.display = "flex";
-        reload.style.position = "relative";
-        reload.style.left = "64px";
-        reload.style.top = "-88px";
-        reload.style.width = "30px";
+        let resetar = document.createElement("img");
+        resetar.src = "reload.png";
+        div.appendChild(resetar);
+        resetar.style.display = "flex";
+        resetar.style.position = "relative";
+        resetar.style.left = "64px";
+        resetar.style.top = "-88px";
+        resetar.style.width = "30px";
 
-        // calculo reload
-        reload.addEventListener("click", ()=>{
+        // calculo resetar
+        resetar.addEventListener("click", ()=>{
                     contadorTotal = 0;
                     contadorMulher = 0;
                     contadorHomem = 0
                
-                    ContadorTotal.textContent = contadorHomem;
-                    TotalContador.textContent = contadorMulher;
-                    TotalSoma.textContent = contadorTotal;
+                    contarTotalHomem.textContent = contadorHomem;
+                    contarTotalMulher.textContent = contadorMulher;
+                    Soma.textContent = contadorTotal;
                 })
 
         // div casal
@@ -84,7 +84,7 @@
                     contadorHomem++;
                     contadorTotal++;
                     contarTotalHomem.textContent = contadorHomem;
-                    TotalSoma.textContent = contadorTotal;
+                    Soma.textContent = contadorTotal;
                 })
             
                 botao_menos_homem.addEventListener("click", ()=>{
@@ -92,7 +92,7 @@
                     contadorHomem--;
                     contadorTotal--;
                     contarTotalHomem.textContent = contadorHomem;
-                    TotalSoma.textContent = contadorTotal;
+                    Soma.textContent = contadorTotal;
                 }
                 })
 
@@ -132,8 +132,8 @@
                 botao_mais_mulher.addEventListener("click", ()=>{
                     contadorMulher++;
                     contadorTotal++;
-                    contarTotalMulher.textContent = contadorHomem;
-                    TotalSoma.textContent = contadorTotal;
+                    contarTotalMulher.textContent = contadorMulher;
+                    Soma.textContent = contadorTotal;
                 })
             
                 botao_menos_mulher.addEventListener("click", ()=>{
@@ -141,7 +141,7 @@
                     contadorMulher--;
                     contadorTotal--;
                     contarTotalMulher.textContent = contadorMulher;
-                    TotalSoma.textContent = contadorTotal;
+                    Soma.textContent = contadorTotal;
                 }
                 })
 
