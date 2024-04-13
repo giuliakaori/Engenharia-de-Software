@@ -11,11 +11,9 @@
 <div class="calculator"></div>
 
 <script>
-    // Criação da calculadora
     function createCalculator() {
         const calculatorDiv = document.querySelector('.calculator');
 
-        // Criar visor
         const display = document.createElement('input');
         display.type = 'text';
         display.id = 'calculator-display';
@@ -40,7 +38,6 @@
         });
     }
 
-    // Função para manipular cliques nos botões
     function handleButtonClick(value) {
         const display = document.querySelector('#calculator-display');
         
@@ -65,7 +62,6 @@
         }
     }
 
-    // Inicialização da calculadora
     createCalculator();
 </script>
 <a href="index.html">Voltar</a>
